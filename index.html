@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</head>
+
+<body>
+    <header id="head-containt">
+        <div id="logo">
+            <img src="assests/Eco-logo.png" alt="logoImage">
+        </div>
+
+        <div id="searchbarContainer">
+    <input type="text" id="searchText" placeholder="Enter Product Name">
+    <i class="fa fa-microphone" id="micBtn"></i>
+    <i class="fa fa-search"></i>
+</div>
+
+
+<!-- <p id="transcript"></p> -->
+
+        <div id="userIcon">
+            
+            <i class="fa-solid fa-moon" id="themeToggle"></i>
+
+            <i class="fa-solid fa-cart-shopping" id="saveItem"></i>
+            <i class="fa fa-heart" id="likeItem"></i>
+            <i class="fa fa-user" id="settingTool"></i>
+
+            <div id="settingList" style="display:none">
+                <p id="profile">My Profile</p>
+                <p id="myOrders">My Orders</p>
+                <!-- <p id="setting">Settings</p> -->
+                <p id="logoutBtn">Logout</p>
+            </div>
+
+
+            <div id="profilePage" class="profile-container">
+                <div class="profile-card">
+                    <h2>My Profile</h2>
+
+                    <div class="profile-row">
+                        <span>Name</span>
+                        <p id="pName"></p>
+                    </div>
+
+                    <div class="profile-row">
+                        <span>Email</span>
+                        <p id="pEmail"></p>
+                    </div>
+
+                    <div class="profile-row">
+                        <span>Phone</span>
+                        <p id="pPhone"></p>
+                    </div>
+
+                    <div class="profile-row">
+                        <span>Password </span>
+                        <p><span id="pPassword"></span> </p><br>
+                        <button id="togglePass">Show</button>
+                    </div><br>
+
+
+                    <button id="backBtn" class="back-btn">⬅ Back to Shop</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+    </header>
+
+
+    <div class="categoryList">
+        <div class="itemCategory">
+            <img src="assests/nh.png" alt="">
+            <p class="categoryItemName">Food</p>
+        </div>
+
+        <div class="itemCategory">
+            <img src="assests/kitchen1.png" alt="">
+            <p class="categoryItemName">Kitchen Essentials</p>
+        </div>
+
+        <div class="itemCategory">
+            <img src="assests/sliper.png" alt="">
+            <p class="categoryItemName">Eco slippers</p>
+        </div>
+
+        <div class="itemCategory">
+            <img src="assests/medicine.png" alt="">
+            <p class="categoryItemName">Medicine</p>
+        </div>
+        <div class="itemCategory">
+            <img src="assests/Rice2.png" alt="">
+            <p class="categoryItemName">Rice</p>
+        </div>
+        <div class="itemCategory">
+            <img src="assests/Millets.png" alt="">
+            <p class="categoryItemName">Millets</p>
+        </div>
+        <div class="itemCategory">
+            <img src="assests/ata.png" alt="">
+            <p class="categoryItemName">Flour</p>
+        </div>
+        <div class="itemCategory">
+            <img src="assests/honey.png" alt="">
+            <p class="categoryItemName">Honey</p>
+        </div>
+        <div class="itemCategory">
+            <img src="assests/snacks.png" alt="">
+            <p class="categoryItemName">Snacks</p>
+        </div>
+        <div class="itemCategory">
+            <img src="assests/Dry-fruit.png" alt="">
+            <p class="categoryItemName">Dry Fruits</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="diaplayAllProduct responsive-grid" id="displayProductContainer">
+        <!-- <div class="cart">
+            <img src="assests/fruit.png" alt="Organic Fruits">
+            <div class="productDetails">
+                <p class="item-name">Organic Fruits</p>
+                <p class="item-price"><span class="priceText">Price:</span> ₹250</p>
+            </div>
+            <div class="btn-group">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div> -->
+    </div>
+<!-- <div id="productContainer"></div> -->
+    <script src="script1.js"></script>
+</body>
+
+</html>

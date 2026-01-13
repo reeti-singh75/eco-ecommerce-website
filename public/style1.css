@@ -1,0 +1,92 @@
+/* ---------- HEADER ---------- */
+#head-containt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+}
+
+/* ---------- LOGO ---------- */
+#logo img {
+    height: 40px;
+}
+
+/* ---------- SEARCH ---------- */
+#searchbarContainer {
+    flex: 1;
+    /* flex: 0 1 220px; */
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 2px solid #60ee60;
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    min-width: 0;
+}
+
+#searchText {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+/* ---------- USER ICONS ---------- */
+#userIcon {
+    display: flex;
+    gap: 14px;
+    font-size: 20px;
+}
+
+/* ---------- BURGER ---------- */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 22px;
+    height: 3px;
+    background: black;
+}
+
+/* FIXED ITEMS */
+#logo,
+#userIcon,
+.burger {
+    flex-shrink: 0;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 500px) {
+
+    /* burger show */
+    .burger {
+        display: flex;
+    }
+
+    /* user icon hide */
+    #userIcon {
+        position: absolute;
+        top: 60px;
+        right: 16px;
+
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* show when active */
+    #userIcon.active {
+        display: flex;
+    }
+}
